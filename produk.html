@@ -4,43 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daftar Produk - Switch On</title>
+  
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #f0f0f0; /* Ganti warna sesuai selera */
+    }
+  </style>
 </head>
 <body>
+  
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Switch On</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Switch On</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav></div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-<!-- PRODUK -->
+  <!-- PRODUK -->
   <section id="produk" class="py-5">
     <div style="height: 30px;"></div>
     <div class="container text-center">
       <h2 class="fw-bold mb-4">Daftar Produk</h2>
       <div class="row g-4">
+        
         <!-- Produk 1 -->
         <div class="col-md-4 d-flex">
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
@@ -48,10 +59,11 @@
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Tas Ransel Dewasa</h5>
               <p class="text-muted">Rp 150.000</p>
-                <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
+              <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
           </div>
         </div>
+
         <!-- Produk 2 -->
         <div class="col-md-4 d-flex">
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
@@ -59,10 +71,11 @@
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Tas Ransel Perempuan</h5>
               <p class="text-muted">Rp 350.000</p>
-                <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
+              <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
           </div>
         </div>
+
         <!-- Produk 3 -->
         <div class="col-md-4 d-flex">
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
@@ -70,85 +83,139 @@
             <div class="card-body d-flex flex-column">
               <h5 class="fw-semibold">Tas Slempang</h5>
               <p class="text-muted">Rp 200.000</p>
-                <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
+              <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-<!-- Modal Pesanan -->
-<div class="modal fade" id="orderModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-4 shadow-lg">
-      <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold">🛒 Detail Pesanan</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Produk -->
-        <div class="order-card d-flex align-items-center mb-4">
-          <img src="img/produk1.png" alt="Produk" class="me-3 rounded-3 shadow-sm" style="width:90px; height:90px; object-fit:cover;">
-          <div>
-            <h6 class="fw-bold mb-1">Nama Produk</h6>
-            <p class="mb-1 text-muted">1 x Rp 0</p>
-            <p class="fw-bold text-dark">Total Harga: Rp 0</p>
-          </div>
+  <!-- Modal Pesanan -->
+  <div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 shadow-lg">
+        
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold">🛒 Detail Pesanan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-
-        <!-- Form -->
-        <form id="orderForm">
-          <div class="mb-3">
-            <input type="text" class="form-control rounded-3" placeholder="Nama Anda" required>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control rounded-3" placeholder="Kelas Anda" required>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control rounded-3" placeholder="Jurusan Anda" required>
-          </div>
-
-          <label class="form-label fw-semibold">Metode Pembayaran</label>
-          <div class="d-flex flex-wrap gap-3 mb-4">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="payment" id="bank" required>
-              <label class="form-check-label" for="bank">🏦 Transfer Bank</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="payment" id="ewallet">
-              <label class="form-check-label" for="ewallet">💳 E-Wallet</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="payment" id="cod">
-              <label class="form-check-label" for="cod">💵 COD</label>
+        
+        <div class="modal-body">
+          <!-- Produk -->
+          <div class="order-card d-flex align-items-center mb-4">
+            <img src="img/produk1.png" alt="Produk" class="me-3 rounded-3 shadow-sm" 
+                 style="width:90px; height:90px; object-fit:cover;">
+            <div>
+              <h6 class="fw-bold mb-1">Nama Produk</h6>
+              <p class="mb-1 text-muted">1 x Rp 0</p>
+              <p class="fw-bold text-dark">Total Harga: Rp 0</p>
             </div>
           </div>
 
-          <button type="submit" class="btn btn-dark w-100 rounded-3 shadow-sm">
-            Pesan Produk
-          </button>
-        </form>
+          <!-- Form -->
+          <form id="orderForm" class="shadow p-4 rounded-3 bg-light">
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-3" placeholder="Nama Anda" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-3" placeholder="Kelas Anda" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-3" placeholder="Jurusan Anda" required>
+            </div>
+
+            <label class="form-label fw-semibold">Metode Pembayaran</label>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment" id="bank" required>
+                <label class="form-check-label" for="bank">🏦 Transfer Bank</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment" id="ewallet">
+                <label class="form-check-label" for="ewallet">💳 E-Wallet</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment" id="cod">
+                <label class="form-check-label" for="cod">💵 COD</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100 rounded-3 shadow-sm">
+              Pesan Produk
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-
-
-<!-- Thank You Modal -->
-<div class="modal fade" id="thankYouModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered text-center">
-    <div class="modal-content shadow-lg border-0 rounded-4 p-4">
-      <img src="Man Face.jpg" alt="Thank You" class="img-fluid rounded mb-3 mx-auto d-block" style="max-width: 150px; object-fit: cover;">
-      <h5 class="fw-bold">Terima Kasih 🎉</h5>
-      <p class="text-muted">Pesanan kamu sudah kami terima!</p>
-      <button class="btn btn-dark w-50 mx-auto" data-bs-dismiss="modal">Ok!</button>
+  <!-- Thank You Modal -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered text-center">
+      <div class="modal-content shadow-lg border-0 rounded-4 p-4">
+        <img src="img/Man Face.jpg" alt="Thank You"
+             class="img-fluid rounded mb-3 mx-auto d-block"
+             style="max-width: 150px; object-fit: cover;">
+        <h5 class="fw-bold">Terima Kasih 🎉</h5>
+        <p class="text-muted">Pesanan kamu sudah kami terima!</p>
+        <button class="btn btn-dark w-50 mx-auto" data-bs-dismiss="modal">Ok!</button>
+      </div>
     </div>
   </div>
-</div>
 
+<!-- Footer disini -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Kiri -->
+      <div class="footer-left">
+        <h3>Join 16,000+ people who get our web marketing tips twice a month</h3>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Email Address" required>
+          <button type="submit">Sign me up</button>
+        </form>
+        <p>By signing up you agree to our <a href="#">Privacy Policy</a>.</p>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Tengah -->
+      <div class="footer-center">
+        <h4>Certified B Corporation</h4>
+        <p>
+          We strive to educate and collaborate with like-minded businesses
+          to make a difference environmentally and socially.
+          Together we can make an impact.
+        </p>
+        <a href="#">Learn About Our BCorp Values</a>
+      </div>
+
+      <!-- Kanan -->
+      <div class="footer-right">
+        <h4>Come Say Hello!</h4>
+        <p>
+          4043 N Ravenswood Ave<br>
+          Suite 316<br>
+          Chicago, IL, 60613<br>
+          <span class="phone">(773) 348-4581</span>
+        </p>
+        <a href="#" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Privacy Policy • Sitemap • Support • © 2025 Your Company</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="order.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

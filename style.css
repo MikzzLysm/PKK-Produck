@@ -17,7 +17,7 @@ body {
 
 .banner {
   min-height: 100vh;
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  background: linear-gradient(to right, #f8f9fa, #8cb3db);
 }
 
 .banner h1 {
@@ -31,10 +31,17 @@ body {
 
 /* produk */
 .img-produk {
-  height: 250px;         /* tinggi seragam */
+  height: 500px;         /* tinggi seragam */
   object-fit: contain;   /* gambar tidak kepotong */
   padding: 10px;         /* beri jarak biar tidak mepet */
 }
+
+.produk-hero {
+  max-width: 450px; /* gedein ukuran, default biasanya 200-250px */
+  width: 100%;
+  height: auto;
+}
+
 
 .card {
   display: flex;
@@ -77,7 +84,218 @@ body {
   border: none;
   transition: 0.3s;
 }
-
+  
 .btn-dark:hover {
   background: #333;
+}
+
+.thanks-img {
+  width: 100px;   /* kotak dengan sudut dikit rounded */
+  background: #f5f5f5;
+  padding: 12px;
+}
+
+/* Button Borders */
+/* From Uiverse.io by faizanullah1999 */ 
+.primary-button {
+ font-family: 'Ropa Sans', sans-serif;
+    /* font-family: 'Valorant', sans-serif; */
+ color: white;
+ cursor: pointer;
+ font-size: 13px;
+ font-weight: bold;
+ letter-spacing: 0.05rem;
+ border: 1px solid #0E1822;
+ padding: 0.8rem 2.1rem;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+ background-color: #0E1822;
+ background-size: 200%;
+ background-position: 200%;
+ background-repeat: no-repeat;
+ transition: 0.3s ease-in-out;
+ transition-property: background-position, border, color;
+ position: relative;
+ z-index: 1;
+}
+
+.primary-button:hover {
+ border: 1px solid #FF4655;
+ color: white;
+ background-position: 40%;
+}
+
+.primary-button:before {
+ content: "";
+ position: absolute;
+ background-color: #0E1822;
+ width: 0.2rem;
+ height: 0.2rem;
+ top: -1px;
+ left: -1px;
+ transition: background-color 0.15s ease-in-out;
+}
+
+.primary-button:hover:before {
+ background-color: white;
+}
+
+.primary-button:hover:after {
+ background-color: white;
+}
+
+.primary-button:after {
+ content: "";
+ position: absolute;
+ background-color: #FF4655;
+ width: 0.3rem;
+ height: 0.3rem;
+ bottom: -1px;
+ right: -1px;
+ transition: background-color 0.15s ease-in-out;
+}
+
+.button-borders {
+ position: relative;
+ width: fit-content;
+ height: fit-content;
+}
+
+.button-borders:before {
+ content: "";
+ position: absolute;
+ width: calc(100% + 0.5em);
+ height: 50%;
+ left: -0.3em;
+ top: -0.3em;
+ border: 1px solid #0E1822;
+ border-bottom: 0px;
+    /* opacity: 0.3; */
+}
+
+.button-borders:after {
+ content: "";
+ position: absolute;
+ width: calc(100% + 0.5em);
+ height: 50%;
+ left: -0.3em;
+ bottom: -0.3em;
+ border: 1px solid #0E1822;
+ border-top: 0px;
+    /* opacity: 0.3; */
+ z-index: 0;
+}
+
+.shape {
+ fill: #0E1822;
+}
+
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-left h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.subscribe-form button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.subscribe-form button:hover {
+  background: #c52834;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.footer-left a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-center h4 {
+  margin-bottom: 10px;
+}
+
+.footer-center a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e63946;
+  text-decoration: none;
+}
+
+.footer-right .phone {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e63946;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: #c52834;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
 }
