@@ -37,17 +37,29 @@
 
 <!-- BANNER -->
 <div id="benner" class="container-fluid banner d-flex align-items-center" data-aos="zoom-in-up">
-    <div class="row w-100 align-items-center px-4">
-        <div class="col-md-6 text-center text-md-start" data-aos="fade-right">
-            <h1 class="fw-bold">Temukan Produk Terbaik di <span class="text-primary">Switch On</span></h1>
-            <p class="mb-4 text-muted">Kami menyediakan produk berkualitas dengan desain modern dan harga terbaik untuk kebutuhan sehari-hari Anda.</p>
-            <div class="button-borders"><a href="img/produkBenner.png" class="primary-button">Lihat Produk</a></div>
-        </div>
-        <div class="col-md-6 text-center mt-3 mt-md-0" data-aos="fade-left">
-            <img src="img/produkBenner.png" alt="Produk Unggulan" class="img-fluid produk-hero">
-        </div>
+  <div class="row w-100 align-items-center px-4">
+    
+    <!-- Kiri -->
+    <div class="col-md-6 text-center text-md-start" data-aos="fade-right">
+      <h1 class="fw-bold">Temukan Produk Terbaik di <span class="text-primary">Switch On</span></h1>
+      <p class="mb-4 text-muted">Kami menyediakan produk berkualitas dengan desain modern dan harga terbaik untuk kebutuhan sehari-hari Anda.</p>
+      
+      <!-- Tombol -->
+      <a class="fancy" href="produk.html">
+        <span class="top-key"></span>
+        <span class="text">Lihat Produk</span>
+        <span class="bottom-key-1"></span>
+        <span class="bottom-key-2"></span>
+      </a>
     </div>
+
+    <!-- Kanan -->
+    <div class="col-md-6 text-center mt-3 mt-md-0" data-aos="fade-left">
+      <img src="img/revisiPoduk.png" alt="Produk Unggulan" class="img-fluid produk-hero">
+    </div>
+  </div>
 </div>
+
 
 <!-- ABOUT -->
 <section id="about" class="py-5 text-center">
@@ -72,20 +84,25 @@
 <footer class="footer">
   <div class="footer-container">
     <!-- Kiri -->
-    <div class="footer-left">
-      <h3>Join 16,000+ people who get our web marketing tips twice a month</h3>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Email Address" required>
-        <button type="submit">Sign me up</button>
-      </form>
-      <p>By signing up you agree to our <a href="#">Privacy Policy</a>.</p>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
-      </div>
-    </div>
+<div class="footer-left">
+  <h3>Join 16,000+ people who get our web marketing tips twice a month</h3>
+  <form class="subscribe-form">
+    <input type="email" placeholder="Email Address" required>
+    <button type="submit">Sign me up</button>
+  </form>
+  <p>By signing up you agree to our <a href="#">Privacy Policy</a>.</p>
+  <div class="social-icons">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/switchon.official_?utm_source=ig_web_button_share_sheet&igsh=MWd5NjN5MXFwbm54aw==" target="_blank" rel="noopener">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+</div>
+
 
     <!-- Tengah -->
     <div class="footer-center">
@@ -101,12 +118,12 @@
     <!-- Kanan -->
     <div class="footer-right">
       <h4>Come Say Hello!</h4>
-      <p>
-        4043 N Ravenswood Ave<br>
-        Suite 316<br>
-        Chicago, IL, 60613<br>
-        <span class="phone">(773) 348-4581</span>
-      </p>
+        <p>
+          Jl. Abdul Muis No.45<br>
+          Petojo Sel., Kecamatan Gambir<br>
+          Jakarta, Daerah Khusus Ibukota Jakarta 10160<br>
+          <span class="phone">(+62) 838-7338-2321.</span>
+        </p>
       <a href="#" class="contact-btn">Contact</a>
     </div>
   </div>
@@ -149,5 +166,7 @@ document.getElementById("orderForm").addEventListener("submit", async function(e
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script src="app.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </body>
 </html>
