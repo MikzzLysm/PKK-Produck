@@ -9,25 +9,37 @@ document.addEventListener('DOMContentLoaded', function () {
       const name = productCard.querySelector('h5').textContent;
       const price = productCard.querySelector('.text-muted').textContent;
 
-      // isi modal pesanan
-      document.querySelector('#orderModal .order-card img').src = imgSrc;
-      document.querySelector('#orderModal .order-card h6').textContent = name;
-      document.querySelector('#orderModal .order-card p.text-muted').textContent = `1 x ${price}`;
-      document.querySelector('#orderModal .order-card p.fw-bold').textContent = `Total Harga: ${price}`;
+      // isi modal pesanan - cek apakah elemen ada
+      const modalImg = document.querySelector('#orderModal .order-card img');
+      const modalName = document.querySelector('#orderModal .order-card h6');
+      const modalPrice = document.querySelector('#orderModal .order-card p.text-muted');
+      const modalTotal = document.querySelector('#orderModal .order-card p.fw-bold');
+      
+      if (modalImg && modalName && modalPrice && modalTotal) {
+        modalImg.src = imgSrc;
+        modalName.textContent = name;
+        modalPrice.textContent = `1 x ${price}`;
+        modalTotal.textContent = `Total Harga: ${price}`;
+      }
     });
   });
 
-  // handle submit form
+  // handle submit form - cek apakah form ada
   const orderForm = document.getElementById('orderForm');
-  orderForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+  const orderModalEl = document.getElementById('orderModal');
+  const thankYouModalEl = document.getElementById('thankYouModal');
+  
+  if (orderForm && orderModalEl && thankYouModalEl) {
+    orderForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    const orderModal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
-    orderModal.hide();
+      const orderModal = bootstrap.Modal.getInstance(orderModalEl);
+      if (orderModal) orderModal.hide();
 
-    const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
-    thankYouModal.show();
-  });
+      const thankYouModal = new bootstrap.Modal(thankYouModalEl);
+      thankYouModal.show();
+    });
+  }
 });
 
 

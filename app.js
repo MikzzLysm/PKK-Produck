@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const orderForm = document.getElementById("orderForm");
 
+  // Cek apakah form ada di halaman ini
+  if (!orderForm) {
+    console.log("Order form tidak ditemukan di halaman ini");
+    return;
+  }
+
   orderForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
