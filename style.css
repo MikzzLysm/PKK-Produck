@@ -195,6 +195,7 @@ body {
  position: relative;
  width: fit-content;
  height: fit-content;
+ z-index: 2;
 }
 
 .button-borders:before {
@@ -206,7 +207,7 @@ body {
  top: -0.3em;
  border: 1px solid #0E1822;
  border-bottom: 0px;
-    /* opacity: 0.3; */
+ z-index: 0;
 }
 
 .button-borders:after {
@@ -218,7 +219,6 @@ body {
  bottom: -0.3em;
  border: 1px solid #0E1822;
  border-top: 0px;
-    /* opacity: 0.3; */
  z-index: 0;
 }
 
