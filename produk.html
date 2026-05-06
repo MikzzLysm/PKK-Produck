@@ -33,12 +33,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Produk</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
-            </a>
+            <a class="nav-link" href="produk-unggulan.html">Produk Unggulan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="produk.html">Produk</a>
           </li>
         </ul>
       </div>
@@ -57,7 +58,7 @@
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
             <img src="img/produk1.png" class="card-img-top img-produk" alt="Tas Ransel Dewasa">
             <div class="card-body d-flex flex-column">
-              <h5 class="fw-semibold">Tas Ransel Dewasa</h5>
+              <h5 class="fw-semibold">Terminal Berdiri 2 tingkat</h5>
               <p class="text-muted">Rp 150.000</p>
               <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
@@ -69,7 +70,7 @@
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
             <img src="img/produk2.png" class="card-img-top img-produk" alt="Tas Ransel Perempuan">
             <div class="card-body d-flex flex-column">
-              <h5 class="fw-semibold">Tas Ransel Perempuan</h5>
+              <h5 class="fw-semibold">Terminal Berdiri 4 tingkat</h5>
               <p class="text-muted">Rp 350.000</p>
               <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
@@ -81,8 +82,8 @@
           <div class="card shadow-sm border-0 w-100 h-100 d-flex flex-column">
             <img src="img/produk3.png" class="card-img-top img-produk" alt="Tas Slempang">
             <div class="card-body d-flex flex-column">
-              <h5 class="fw-semibold">Tas Slempang</h5>
-              <p class="text-muted">Rp 200.000</p>
+              <h5 class="fw-semibold">Terminal Berdiri 2 tingkat</h5>
+              <p class="text-muted">Rp 150.000</p>
               <a href="#" class="btn btn-dark mt-auto w-100" data-bs-toggle="modal" data-bs-target="#orderModal">Beli Sekarang</a>
             </div>
           </div>
@@ -129,17 +130,27 @@
             <label class="form-label fw-semibold">Metode Pembayaran</label>
             <div class="d-flex flex-wrap gap-3 mb-4">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment" id="bank" required>
-                <label class="form-check-label" for="bank">🏦 Transfer Bank</label>
+                <input class="form-check-input" type="radio" name="payment" id="qris" required>
+                <label class="form-check-label" for="qris">📱 QRIS</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment" id="ewallet">
-                <label class="form-check-label" for="ewallet">💳 E-Wallet</label>
+                <input class="form-check-input" type="radio" name="payment" id="cash">
+                <label class="form-check-label" for="cash">💵 Cash</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment" id="cod">
-                <label class="form-check-label" for="cod">💵 COD</label>
+            </div>
+
+            <!-- QRIS Payment Section -->
+            <div id="qrisSection" class="qris-payment-section mb-4" style="display: none;">
+              <div class="alert alert-info d-flex align-items-center" role="alert">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                <span>Silakan scan QRIS di bawah atau download untuk pembayaran</span>
               </div>
+              <div class="qris-container text-center mb-3">
+                <img src="img/Qris.jpeg" alt="QRIS Payment" class="img-fluid rounded-3 shadow-sm" style="max-width: 280px; border: 2px solid #dee2e6;">
+              </div>
+              <a href="img/Qris.jpeg" download="Qris.jpeg" class="btn btn-outline-primary w-100 rounded-3 mb-3">
+                <i class="bi bi-download me-2"></i>Download QRIS
+              </a>
             </div>
 
             <button type="submit" class="btn btn-dark w-100 rounded-3 shadow-sm">
@@ -150,6 +161,27 @@
       </div>
     </div>
   </div>
+
+  <!-- Script untuk handle QRIS toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const qrisRadio = document.getElementById('qris');
+      const cashRadio = document.getElementById('cash');
+      const qrisSection = document.getElementById('qrisSection');
+
+      qrisRadio.addEventListener('change', function () {
+        if (this.checked) {
+          qrisSection.style.display = 'block';
+        }
+      });
+
+      cashRadio.addEventListener('change', function () {
+        if (this.checked) {
+          qrisSection.style.display = 'none';
+        }
+      });
+    });
+  </script>
 
   <!-- Thank You Modal -->
   <div class="modal fade" id="thankYouModal" tabindex="-1">
@@ -177,10 +209,8 @@
         </form>
         <p>By signing up you agree to our <a href="#">Privacy Policy</a>.</p>
         <div class="social-icons">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/switchon.official_?utm_source=ig_web_button_share_sheet&igsh=MWd5NjN5MXFwbm54aw%3D%3D" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/083873382321" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
 
@@ -199,10 +229,10 @@
       <div class="footer-right">
         <h4>Come Say Hello!</h4>
         <p>
-          4043 N Ravenswood Ave<br>
-          Suite 316<br>
-          Chicago, IL, 60613<br>
-          <span class="phone">(773) 348-4581</span>
+          Jl. Abdul Muis No.45<br>
+          Petojo Sel., Kecamatan Gambir<br>
+          Jakarta, Daerah Khusus Ibukota Jakarta 10160<br>
+          <span class="phone">(+62) 838-7338-2321</span>
         </p>
         <a href="#" class="contact-btn">Contact</a>
       </div>

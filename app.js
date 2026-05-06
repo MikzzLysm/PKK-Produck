@@ -8,7 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const nama = orderForm.querySelector('input[placeholder="Nama Anda"]').value;
     const kelas = orderForm.querySelector('input[placeholder="Kelas Anda"]').value;
     const jurusan = orderForm.querySelector('input[placeholder="Jurusan Anda"]').value;
-    const metode = orderForm.querySelector('input[name="payment"]:checked')?.id;
+    const metodeId = orderForm.querySelector('input[name="payment"]:checked')?.id;
+    
+    // Map metode ID ke label yang jelas
+    const metodeMap = {
+      'qris': 'QRIS',
+      'cash': 'Cash'
+    };
+    const metode = metodeMap[metodeId] || metodeId;
 
     // Validasi input
     if (!nama || !kelas || !jurusan || !metode) {

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Switch On</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .team-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .team-card .card-body {
+      padding: 20px;
+    }
+    .team-role {
+      background: #0d6efd;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .team-description {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Switch On</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produk-unggulan.html">Produk Unggulan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produk.html">Produk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div style="height: 80px;"></div>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h1 class="fw-bold mb-4 text-center">Tentang Kami</h1>
+      <p class="text-center text-muted mb-5" style="font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Switch On adalah platform e-commerce yang menyediakan berbagai produk berkualitas dengan harga terbaik. Kami berkomitmen memberikan pengalaman belanja yang mudah, aman, dan terpercaya bagi semua pelanggan kami.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tim Kami Section -->
+  <section class="py-5" style="background: #f8f9fa;">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Tim Kami</h2>
+      
+      <div class="row g-4">
+        <!-- Ketua -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Yudrian Juliansyah</h5>
+              <div class="team-role">Ketua</div>
+              <p class="team-description">
+                Sebagai ketua tim, Yudrian memimpin visi dan strategi pengembangan Switch On dengan dedikasi penuh untuk memberikan inovasi terbaik dalam industri e-commerce.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anggota 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Naufal Dzaki</h5>
+              <div class="team-role">Anggota</div>
+              <p class="team-description">
+                Naufal turut berkontribusi dalam pengembangan fitur-fitur penting dan memastikan setiap aspek layanan Switch On berjalan dengan optimal.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anggota 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Vannesius Eldes</h5>
+              <div class="team-role">Anggota</div>
+              <p class="team-description">
+                Vannesius berperan aktif dalam koordinasi tim dan membantu memastikan semua target proyek tercapai dengan baik dan tepat waktu.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sekertaris 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Azzizah Dwi</h5>
+              <div class="team-role">Sekertaris</div>
+              <p class="team-description">
+                Azzizah mengelola administrasi dan dokumentasi tim dengan profesional, memastikan semua catatan dan laporan tersusun rapi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sekertaris 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Melinda</h5>
+              <div class="team-role">Sekertaris</div>
+              <p class="team-description">
+                Melinda membantu dalam pengelolaan komunikasi internal dan eksternal, serta menjaga kelancaran operasional sehari-hari tim.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programmer -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="card team-card border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <i class="bi bi-person-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+              </div>
+              <h5 class="fw-bold">Dwi Wahyu Jatmiko Putra</h5>
+              <div class="team-role">Programmer</div>
+              <p class="team-description">
+                Sebagai programmer utama, Miko menangani pengembangan teknis platform Switch On, mengimplementasikan fitur-fitur inovatif dengan teknologi terkini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dokumentasi Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Dokumentasi Pembuatan</h2>
+      
+      <div class="row g-4">
+        <!-- Dokumen 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/dokum 1.jpeg" class="card-img-top" alt="Dokumentasi 1" style="height: 300px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="fw-bold">Dokumentasi Pembuatan - 1</h5>
+              <p class="text-muted">Tahap awal persiapan dan perencanaan proyek Switch On</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dokumen 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/dokum 2.jpeg" class="card-img-top" alt="Dokumentasi 2" style="height: 300px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="fw-bold">Dokumentasi Pembuatan - 2</h5>
+              <p class="text-muted">Proses pengembangan dan implementasi fitur utama</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dokumen 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="img/dokum 3.jpeg" class="card-img-top" alt="Dokumentasi 3" style="height: 300px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="fw-bold">Dokumentasi Pembuatan - 3</h5>
+              <p class="text-muted">Tahap finalisasi dan persiapan launching aplikasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Kiri -->
+      <div class="footer-left">
+        <h3>Join 16,000+ people who get our web marketing tips twice a month</h3>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Email Address" required>
+          <button type="submit">Sign me up</button>
+        </form>
+        <p>By signing up you agree to our <a href="#">Privacy Policy</a>.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/switchon.official_?utm_source=ig_web_button_share_sheet&igsh=MWd5NjN5MXFwbm54aw%3D%3D" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/083873382321" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Tengah -->
+      <div class="footer-center">
+        <h4>Certified B Corporation</h4>
+        <p>
+          We strive to educate and collaborate with like-minded businesses
+          to make a difference environmentally and socially.
+          Together we can make an impact.
+        </p>
+        <a href="#">Learn About Our BCorp Values</a>
+      </div>
+
+      <!-- Kanan -->
+      <div class="footer-right">
+        <h4>Come Say Hello!</h4>
+        <p>
+          Jl. Abdul Muis No.45<br>
+          Petojo Sel., Kecamatan Gambir<br>
+          Jakarta, Daerah Khusus Ibukota Jakarta 10160<br>
+          <span class="phone">(+62) 838-7338-2321</span>
+        </p>
+        <a href="#" class="contact-btn">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Privacy Policy • Sitemap • Support • © 2025 Your Company</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

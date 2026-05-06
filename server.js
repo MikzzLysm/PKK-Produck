@@ -37,8 +37,15 @@ app.get("/", (req, res) => {
 app.post("/pesan", (req, res) => {
   const { nama, kelas, jurusan, metode_pembayaran } = req.body;
 
+  // Validasi input
   if (!nama || !kelas || !jurusan || !metode_pembayaran) {
     return res.status(400).json({ message: "Data tidak lengkap" });
+  }
+
+  // Validasi metode pembayaran hanya QRIS atau Cash
+  const validMethods = ['QRIS', 'Cash'];
+  if (!validMethods.includes(metode_pembayaran)) {
+    return res.status(400).json({ message: "Metode pembayaran tidak valid" });
   }
 
   const sql = "INSERT INTO pesanan (nama, kelas, jurusan, metode_pembayaran) VALUES (?, ?, ?, ?)";
